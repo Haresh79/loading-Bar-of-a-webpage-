@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style>
+#logo{width:100px; height:100px; background-color:#ebcc34; text-align:center;
+margin:auto; margin-top:60%; font-size:25px; border-radius:50%;}
+#bar{ margin:auto; width:90%; height:10px;
+border:2px solid black; margin-top:20px; border-radius:10px;}
+#loading{ background-color:#2cd192; width:100%; height:100%;
+border-radius:10px; position:relative; animation-name:loadanim;
+animation-duration:3s;
+}
+@keyframes loadanim{
+	0%{width:0;}
+	10%{width:10%;}
+	50%{width:30%;}
+	100%{width:100%;}
+}
+#image{ position:absolute; top:0px; left:0px;}
+#loader{z-index:999; background-color:white;width:100vw; height:100vh; position:absolute;
+top:0px; left:0px;}
+</style>
+</head>
+<body>
+<div id="loader">
+<div id="logo">Logo</div>
+ <div id="bar">
+	<div id="loading">
+	</div>
+ </div>
+</div>
+<img src="/storage/emulated/0/Pictures/Screenshots/Screenshot_20230409_123618.jpg" 
+width="100%" height="100%" id="image">
+<script type="text/javascript">
+
+function loading(){
+	document.getElementById('loader').style.zIndex="-1";
+    
+}
+setTimeout(loading,3800)
+</script>
+</body>
+</html>
